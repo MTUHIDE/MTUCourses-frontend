@@ -154,7 +154,6 @@ export const filterSection = (
 			}
 
 			case 'instructor': {
-				console.log(section.instructors);
 				const sectionInstructorsName = section.instructors.map(instructor => apiState.instructorsById.get(instructor.id)?.fullName.replaceAll(' ', '').toLowerCase());
 				const lowercaseValue = value.toLowerCase();
 
