@@ -155,7 +155,11 @@ export class UIState {
 			const qualifierFilteredSections = [];
 			if (this.rootState.allBasketsState.currentBasket) {
 				for (const section of sections) {
-					qualifierFilteredSections.push(filterSection(searchPairs, section, this.rootState.allBasketsState.currentBasket.isSectionScheduleCompatibleMap));
+					qualifierFilteredSections.push(filterSection(searchPairs, section, this.rootState.allBasketsState.currentBasket.isSectionScheduleCompatibleMap, this.rootState.apiState));
+				}
+			} else {
+				for (const section of sections) {
+					qualifierFilteredSections.push(filterSection(searchPairs, section, undefined, this.rootState.apiState));
 				}
 			}
 

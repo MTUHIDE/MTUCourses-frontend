@@ -1,8 +1,9 @@
 import memoizeOne from 'memoize-one';
 import {ELocationType, type ICourseFromAPI, type ISectionFromAPI, type ISectionFromAPIWithSchedule} from './api-types';
 import parseCreditsFilter from './parse-credits-filter';
+import {type APIState} from './state/api';
 
-export const qualifiers = ['subject', 'level', 'has', 'credits', 'id'];
+export const qualifiers = ['subject', 'level', 'has', 'credits', 'id', 'instructor'];
 
 const generateArrayFromRange = memoizeOne((low: number, high: number): number[] => {
 	const result = [];
@@ -70,7 +71,8 @@ export type TQualifierResult = 'MATCHED' | 'NOMATCH' | 'REMOVE';
 export const filterSection = (
 	tokenPairs: Array<[string, string]>,
 	section: ISectionFromAPIWithSchedule,
-	isSectionScheduleCompatibleMap: Map<ISectionFromAPI['id'], boolean>,
+	isSectionScheduleCompatibleMap: Map<ISectionFromAPI['id'], boolean> | undefined,
+	apiState: APIState,
 ): TQualifierResult => {
 	let result: TQualifierResult = 'NOMATCH';
 
@@ -103,7 +105,10 @@ export const filterSection = (
 			case 'is': {
 				switch (value) {
 					case 'compatible': {
-						result = isSectionScheduleCompatibleMap.get(section.id) ? 'MATCHED' : 'REMOVE';
+						if (isSectionScheduleCompatibleMap) {
+							result = isSectionScheduleCompatibleMap.get(section.id) ? 'MATCHED' : 'REMOVE';
+						}
+
 						break;
 					}
 
@@ -143,6 +148,25 @@ export const filterSection = (
 					if (result !== 'MATCHED') {
 						result = 'REMOVE';
 					}
+				}
+
+				break;
+			}
+
+			case 'instructor': {
+				console.log(section.instructors);
+				const sectionInstructorsName = section.instructors.map(instructor => apiState.instructorsById.get(instructor.id)?.fullName.replaceAll(' ', '').toLowerCase());
+				const lowercaseValue = value.toLowerCase();
+
+				for (const name of sectionInstructorsName) {
+					if (name?.includes(lowercaseValue)) {
+						result = 'MATCHED';
+						break;
+					}
+				}
+
+				if (result !== 'MATCHED') {
+					result = 'REMOVE';
 				}
 
 				break;
