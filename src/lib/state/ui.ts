@@ -155,11 +155,7 @@ export class UIState {
 			const qualifierFilteredSections = [];
 			if (this.rootState.allBasketsState.currentBasket) {
 				for (const section of sections) {
-					qualifierFilteredSections.push(filterSection(searchPairs, section, this.rootState.allBasketsState.currentBasket.isSectionScheduleCompatibleMap, this.rootState.apiState));
-				}
-			} else {
-				for (const section of sections) {
-					qualifierFilteredSections.push(filterSection(searchPairs, section, undefined, this.rootState.apiState));
+					qualifierFilteredSections.push(filterSection(searchPairs, section, this.rootState.allBasketsState.currentBasket.isSectionScheduleCompatibleMap));
 				}
 			}
 
@@ -212,9 +208,7 @@ export class UIState {
 			builder.field('email');
 
 			for (const instructor of this.rootState.apiState.instructors) {
-				if (!instructor.deletedAt) {
-					builder.add(instructor);
-				}
+				builder.add(instructor);
 			}
 		});
 	}
