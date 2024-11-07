@@ -6,6 +6,7 @@ import {filterCourse, filterSection} from '../search-filters';
 import requestIdleCallbackGuard from '../request-idle-callback-guard';
 import parseSearchQuery from '../parse-search-query';
 import {type RootState} from './root';
+import instructorList from "src/components/sections-table/instructor-list";
 
 export type ICourseWithFilteredSections = {
 	course: ICourseFromAPI;

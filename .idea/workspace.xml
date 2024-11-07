@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="855a0eee-0490-4847-a06d-24df53da4e68" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/basket/table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search-bar/courses.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search-bar/courses.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections-table/time-display.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections-table/time-display.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/search-filters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/search-filters.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/state/ui.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/state/ui.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/components/sections-table/time-display.tsx" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2bpSLzsDAUPDA0b5ko88PxllKlK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "MoreSections",
+    "js.introduce.parameter.generate.optional": "false",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/MyDownloads/MTUCourses/frontend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "C:\\MyDownloads\\MTUCourses\\frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24fca987" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="855a0eee-0490-4847-a06d-24df53da4e68" name="Changes" comment="" />
+      <created>1706910474405</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706910474405</updated>
+      <workItem from="1706910475517" duration="304000" />
+      <workItem from="1707248519728" duration="17000" />
+      <workItem from="1708117877555" duration="5054000" />
+      <workItem from="1708353572221" duration="333000" />
+      <workItem from="1708441838369" duration="1148000" />
+      <workItem from="1708563414432" duration="1240000" />
+      <workItem from="1708700740781" duration="1196000" />
+      <workItem from="1709262380483" duration="915000" />
+      <workItem from="1709562711136" duration="3684000" />
+      <workItem from="1709760707217" duration="2563000" />
+      <workItem from="1709910154771" duration="28000" />
+      <workItem from="1709932978934" duration="2807000" />
+      <workItem from="1709940477655" duration="82000" />
+      <workItem from="1710097561409" duration="604000" />
+      <workItem from="1710162374696" duration="1192000" />
+      <workItem from="1710258931177" duration="3191000" />
+      <workItem from="1710512424566" duration="18000" />
+      <workItem from="1710534629729" duration="1752000" />
+      <workItem from="1710602862504" duration="92000" />
+      <workItem from="1710864758447" duration="1415000" />
+      <workItem from="1711116093391" duration="145000" />
+      <workItem from="1711137335992" duration="2108000" />
+      <workItem from="1711720944009" duration="25000" />
+      <workItem from="1726161381036" duration="1983000" />
+      <workItem from="1726764510822" duration="3086000" />
+      <workItem from="1727274818463" duration="9089000" />
+      <workItem from="1727975198572" duration="6788000" />
+      <workItem from="1728497521359" duration="3735000" />
+      <workItem from="1728576731627" duration="3050000" />
+      <workItem from="1729774088671" duration="14616000" />
+      <workItem from="1730926487936" duration="4397000" />
+      <workItem from="1731002500059" duration="3366000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -68,7 +68,8 @@ const SectionRow = observer(({section, isForCapture, handleSearch}: SectionRowPr
 				<InstructorList instructors={section.instructors} showAvatar={!isForCapture}/>
 			</Td>
 			<Td>
-				<TimeDisplay
+				<TimeDisplay //this is where the green time bit is
+					section = {section}
 					size='lg'
 					schedule={section.parsedTime ?? undefined}
 					colorScheme={currentBasket?.doesSectionInBasketConflictMap.get(section.id) ? 'red' : undefined}/>

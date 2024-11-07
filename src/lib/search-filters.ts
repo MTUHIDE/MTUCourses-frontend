@@ -1,8 +1,14 @@
 import memoizeOne from 'memoize-one';
-import {ELocationType, type ICourseFromAPI, type ISectionFromAPI, type ISectionFromAPIWithSchedule} from './api-types';
+import {
+	ELocationType,
+	type ICourseFromAPI,
+	IInstructorFromAPI,
+	type ISectionFromAPI,
+	type ISectionFromAPIWithSchedule
+} from './api-types';
 import parseCreditsFilter from './parse-credits-filter';
 
-export const qualifiers = ['subject', 'level', 'has', 'credits', 'id'];
+export const qualifiers = ['subject', 'level', 'has', 'credits', 'id', 'instructor'];
 
 const generateArrayFromRange = memoizeOne((low: number, high: number): number[] => {
 	const result = [];
@@ -70,6 +76,7 @@ export type TQualifierResult = 'MATCHED' | 'NOMATCH' | 'REMOVE';
 export const filterSection = (
 	tokenPairs: Array<[string, string]>,
 	section: ISectionFromAPIWithSchedule,
+	instructor : IInstructorFromAPI, // I added
 	isSectionScheduleCompatibleMap: Map<ISectionFromAPI['id'], boolean>,
 ): TQualifierResult => {
 	let result: TQualifierResult = 'NOMATCH';
@@ -139,7 +146,7 @@ export const filterSection = (
 							result = 'MATCHED';
 						}
 					}
-
+					console.log("Test One")
 					if (result !== 'MATCHED') {
 						result = 'REMOVE';
 					}
@@ -147,7 +154,24 @@ export const filterSection = (
 
 				break;
 			}
-
+			//Below is what I'm trying to add
+			case 'instructor': {
+				let instructorID = section.instructors;
+				result = 'REMOVE'
+				for (let instructor of instructorID){
+					/**if (value === instructor.id){
+						for (let i = 0; i<instructorID.length; i++){
+							if(instructor.id === instructorID[i].id){
+								result = 'MATCHED';
+								break;
+							}
+						}
+						break;
+					}*/
+				}
+				break;
+			}
+			//Above is what I'm trying to add
 			default: {
 				break;
 			}

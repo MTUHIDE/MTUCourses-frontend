@@ -190,7 +190,7 @@ const CoursesSearchBar = observer(() => {
 					/>
 				</Tooltip>
 			)}
-			placeholder='Search by instructor, subject, section, or anything else...'
+			placeholder='Search by instructor, subject, section, or anything else...' //wow
 			isEnabled={apiState.hasDataForTrackedEndpoints}
 			value={uiState.searchValue}
 			onChange={handleSearchChange}
